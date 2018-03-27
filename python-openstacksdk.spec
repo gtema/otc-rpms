@@ -55,15 +55,15 @@ BuildRequires:  python2-subunit
 BuildRequires:  python2-oslotest
 BuildRequires:  python2-stestr
 BuildRequires:  python2-mock
-BuildRequires:  python2-testrepository
-BuildRequires:  python2-testscenarios
+BuildRequires:  python-testrepository
+BuildRequires:  python-testscenarios
 BuildRequires:  python2-testtools
 BuildRequires:  python2-glanceclient
 %if 0%{?fedora} || 0%{?rhel} > 7
-BuildRequires:  python2-requests-mock
+# BuildRequires:  python2-requests-mock
 BuildRequires:  python2-decorator
 BuildRequires:  python2-dogpile-cache
-BuildRequires:  python2-ipaddress
+# BuildRequires:  python2-ipaddress
 BuildRequires:  python2-netifaces
 %else
 BuildRequires:  python-requests-mock
@@ -80,7 +80,7 @@ Requires:       python2-six
 Requires:       python2-pbr >= 2.0.0
 Requires:       python2-appdirs
 Requires:       python2-requestsexceptions >= 1.2.0
-Requires:       python2-munch
+Requires:       python-munch
 Requires:       python2-jmespath
 Requires:       python2-futures
 Requires:       python2-iso8601
@@ -88,7 +88,7 @@ Requires:       python2-os-service-types >= 1.1.0
 %if 0%{?fedora} || 0%{?rhel} > 7
 Requires:       python2-decorator
 Requires:       python2-dogpile-cache
-Requires:       python2-ipaddress
+# Requires:       python2-ipaddress
 Requires:       python2-netifaces
 Requires:       python2-pyyaml
 %else
