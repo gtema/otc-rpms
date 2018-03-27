@@ -220,7 +220,9 @@ rm -rf .testrepository
 %files -n python2-%{pypi_name}
 %doc README.rst
 %license LICENSE
+%if !0%{?with_python3}
 %{_bindir}/openstack-inventory
+%endif
 %{python2_sitelib}/openstack
 %{python2_sitelib}/%{pypi_name}-*.egg-info
 %exclude %{python2_sitelib}/openstack/tests
@@ -238,6 +240,7 @@ rm -rf .testrepository
 %files -n python3-%{pypi_name}
 %doc README.rst
 %license LICENSE
+%{_bindir}/openstack-inventory
 %{python3_sitelib}/openstack
 %{python3_sitelib}/%{pypi_name}-*.egg-info
 %exclude %{python3_sitelib}/openstack/tests
