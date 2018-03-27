@@ -23,7 +23,7 @@ Summary:        An SDK for building applications to work with OpenStack
 
 License:        ASL 2.0
 URL:            http://www.openstack.org/
-Source0:        https://pypi.io/packages/source/o/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
+Source0:        https://pypi.io/packages/source/o/%{name}/%{pypi_name}-%{upstream_version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  git
@@ -53,7 +53,7 @@ BuildRequires:  python2-iso8601 >= 0.1.11
 BuildRequires:  python2-jsonpatch >= 1.6
 BuildRequires:  python2-subunit
 BuildRequires:  python2-oslotest
-BuildRequires:  python2-stestr
+# BuildRequires:  python2-stestr
 BuildRequires:  python2-mock
 BuildRequires:  python-testrepository
 BuildRequires:  python-testscenarios
@@ -210,7 +210,6 @@ rm -rf html/.{doctrees,buildinfo}
 
 %check
 # stestr --test-path ./openstack/tests/unit run
-
 %if 0%{?with_python3}
 rm -rf .testrepository
 # stestr-3 --test-path ./openstack/tests/unit run
