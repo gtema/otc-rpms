@@ -42,7 +42,7 @@ BuildRequires:  python2-openstackdocstheme
 BuildRequires:  python2-keystoneauth1
 BuildRequires:  python2-appdirs
 BuildRequires:  python2-requestsexceptions
-BuildRequires:  python2-munch
+BuildRequires:  python-munch
 BuildRequires:  python2-jmespath
 BuildRequires:  python2-futures
 BuildRequires:  python2-jsonschema
