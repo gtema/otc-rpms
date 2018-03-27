@@ -23,7 +23,7 @@ Summary:        An SDK for building applications to work with OpenStack
 
 License:        ASL 2.0
 URL:            http://www.openstack.org/
-Source0:        https://pypi.io/packages/source/o/%{name}/%{pypi_name}-%{upstream_version}.tar.gz
+Source0:        https://tarballs.openstack.org/%{name}/%{pypi_name}-%{upstream_version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  git
