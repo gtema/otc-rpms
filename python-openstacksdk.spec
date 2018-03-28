@@ -90,7 +90,7 @@ Requires:       python2-decorator
 Requires:       python2-dogpile-cache
 # Requires:       python2-ipaddress
 Requires:       python2-netifaces
-Requires:       python2-pyyaml
+# Requires:       python2-pyyaml
 %else
 Requires:       python-decorator
 Requires:       python-dogpile-cache
