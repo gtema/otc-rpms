@@ -46,7 +46,7 @@ BuildRequires: python2-oslo-utils
 BuildRequires: python2-os-testr
 %if 0%{?fedora} || 0%{?rhel} > 7
 # F27 packages
-%if 0%{?fedora} = 27
+%if 0%{?fedora} == 27
 BuildRequires: PyYAML
 BuildRequires: python-requests-mock >= 1.1
 BuildRequires: python-fixtures >= 1.3.1
