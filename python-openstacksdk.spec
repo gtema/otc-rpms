@@ -95,11 +95,15 @@ Requires:       python2-futures
 Requires:       python2-iso8601
 Requires:       python2-os-service-types >= 1.1.0
 %if 0%{?fedora} || 0%{?rhel} > 7
+%if 0%{?fedora} == 27
+Requires:       PyYAML
+%else
+Requires:       python2-pyyaml
+%endif
 Requires:       python2-decorator
 Requires:       python2-dogpile-cache
 # Requires:       python2-ipaddress
 Requires:       python2-netifaces
-# Requires:       python2-pyyaml
 %else
 Requires:       python-decorator
 Requires:       python-dogpile-cache
