@@ -60,6 +60,15 @@ BuildRequires:  python-testscenarios
 BuildRequires:  python2-testtools
 BuildRequires:  python2-glanceclient
 %if 0%{?fedora} || 0%{?rhel} > 7
+%if 0%{?fedora} == 27
+BuildRequires: PyYAML
+BuildRequires: python-requests-mock
+BuildRequires: python-ipaddress
+%else
+BuildRequires: python2-pyyaml
+BuildRequires: python2-requests-mock
+BuildRequires: python2-ipaddress
+%endif
 # BuildRequires:  python2-requests-mock
 BuildRequires:  python2-decorator
 BuildRequires:  python2-dogpile-cache
