@@ -21,7 +21,7 @@ License:          ASL 2.0
 URL:              https://github.com/OpenTelekomCloud/%{name}
 #Source0:          https://github.com/OpenTelekomCloud/% { name}/archive/% { commit}/% { name}-% { shortcommit}.tar.gz
 BuildArch:        noarch
-Source0:          https://github.com/OpenTelekomCloud/%{name}/archive/%{version}.tar.gz
+Source0:          https://github.com/OpenTelekomCloud/%{name}/archive/%{upstream_version}.tar.gz
 
 %global _description \
 Adds OpenTelekomCloud services into the OpenStackSDK and the OpenStackCLI
@@ -75,7 +75,7 @@ A collection of libraries for building applications to work with OTC cloud - doc
 %endif
 
 %prep
-%autosetup -n %{name}-%{version}
+%autosetup -n %{name}-%{upstream_version} -S git
 
 # We handle requirements ourselves
 rm -rf requirements.txt test-requirements.txt
