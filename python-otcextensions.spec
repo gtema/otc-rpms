@@ -37,6 +37,16 @@ BuildRequires: python2-openstacksdk-tests
 BuildRequires: python2-openstackclient
 BuildRequires: python2-boto3
 BuildRequires: git
+%if 0%{?fedora} || 0%{?rhel} > 7
+%if 0%{?fedora} == 27
+BuildRequires: PyYAML
+BuildRequires: python-requests-mock
+BuildRequires: python-ipaddress
+%else
+BuildRequires: python2-pyyaml
+BuildRequires: python2-requests-mock
+BuildRequires: python2-ipaddress
+%endif
 
 Requires:      python2-openstacksdk >= 0.11.0
 Requires:      python2-openstackclient >= 3.12.0
@@ -57,7 +67,9 @@ BuildRequires: python3-openstackclient
 BuildRequires: python3-boto3
 BuildRequires: python3-mock
 BuildRequires: python3-stestr
+BuildRequires: python3-requests-mock
 BuildRequires: git
+
 Requires:      python3-openstacksdk >= 0.11.0
 Requires:      python3-openstackclient >= 3.12.0
 Requires:      python3-boto3 >= 1.4.6
