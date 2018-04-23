@@ -47,6 +47,7 @@ BuildRequires: python2-pyyaml
 BuildRequires: python2-requests-mock
 BuildRequires: python2-ipaddress
 %endif
+%endif
 
 Requires:      python2-openstacksdk >= 0.11.0
 Requires:      python2-openstackclient >= 3.12.0
