@@ -75,7 +75,7 @@ A collection of libraries for building applications to work with OTC cloud - doc
 %endif
 
 %prep
-%autosetup -n %{name}-%{version} -S git
+%autosetup -n %{name}-%{version}
 
 # We handle requirements ourselves
 rm -rf requirements.txt test-requirements.txt
