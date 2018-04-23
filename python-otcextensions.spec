@@ -36,6 +36,7 @@ BuildRequires: python2-openstacksdk
 BuildRequires: python2-openstacksdk-tests
 BuildRequires: python2-openstackclient
 BuildRequires: python2-boto3
+BuildRequires: git
 
 Requires:      python2-openstacksdk >= 0.11.0
 Requires:      python2-openstackclient >= 3.12.0
@@ -56,6 +57,7 @@ BuildRequires: python3-openstackclient
 BuildRequires: python3-boto3
 BuildRequires: python3-mock
 BuildRequires: python3-stestr
+BuildRequires: git
 Requires:      python3-openstacksdk >= 0.11.0
 Requires:      python3-openstackclient >= 3.12.0
 Requires:      python3-boto3 >= 1.4.6
