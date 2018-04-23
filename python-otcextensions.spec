@@ -97,6 +97,7 @@ BuildRequires: python3-devel
 BuildRequires: python3-openstacksdk
 BuildRequires: python3-openstacksdk-tests
 BuildRequires: python3-openstackclient
+BuildRequires: python3-boto3
 BuildRequires: python3-devel
 BuildRequires: python3-pbr >= 2.0.0
 BuildRequires: python3-keystoneauth1
