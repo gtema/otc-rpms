@@ -26,6 +26,8 @@ Source0:          https://github.com/OpenTelekomCloud/%{name}/archive/%{upstream
 %global _description \
 Adds OpenTelekomCloud services into the OpenStackSDK and the OpenStackCLI
 
+BuildRequires:  git
+
 %description %{_description}
 
 %package -n python2-%{modname}
@@ -36,7 +38,28 @@ BuildRequires: python2-openstacksdk
 BuildRequires: python2-openstacksdk-tests
 BuildRequires: python2-openstackclient
 BuildRequires: python2-boto3
-BuildRequires: git
+BuildRequires: python2-pbr >= 2.0.0
+BuildRequires: python2-sphinx
+BuildRequires: python2-openstackdocstheme
+BuildRequires: python2-keystoneauth1
+BuildRequires: python2-appdirs
+BuildRequires: python2-requestsexceptions
+BuildRequires: python-munch
+BuildRequires: python2-jmespath
+BuildRequires: python2-futures
+BuildRequires: python2-jsonschema
+BuildRequires: python2-os-service-types
+# Test requirements
+BuildRequires: python2-deprecation
+BuildRequires: python2-iso8601 >= 0.1.11
+BuildRequires: python2-jsonpatch >= 1.6
+BuildRequires: python2-subunit
+BuildRequires: python2-oslotest
+BuildRequires: python2-mock
+BuildRequires: python-testrepository
+BuildRequires: python-testscenarios
+BuildRequires: python2-testtools
+BuildRequires: python2-glanceclient
 %if 0%{?fedora} || 0%{?rhel} > 7
 %if 0%{?fedora} == 27
 BuildRequires: PyYAML
@@ -47,6 +70,15 @@ BuildRequires: python2-pyyaml
 BuildRequires: python2-requests-mock
 BuildRequires: python2-ipaddress
 %endif
+BuildRequires: python2-decorator
+BuildRequires: python2-dogpile-cache
+BuildRequires: python2-netifaces
+%else
+BuildRequires: python-requests-mock
+BuildRequires: python-decorator
+BuildRequires: python-dogpile-cache
+BuildRequires: python-ipaddress
+BuildRequires: python-netifaces
 %endif
 
 Requires:      python2-openstacksdk >= 0.11.0
@@ -65,11 +97,30 @@ BuildRequires: python3-devel
 BuildRequires: python3-openstacksdk
 BuildRequires: python3-openstacksdk-tests
 BuildRequires: python3-openstackclient
-BuildRequires: python3-boto3
-BuildRequires: python3-mock
+BuildRequires: python3-devel
+BuildRequires: python3-pbr >= 2.0.0
+BuildRequires: python3-keystoneauth1
+BuildRequires: python3-dogpile-cache
+BuildRequires: python3-appdirs
+BuildRequires: python3-requestsexceptions
+BuildRequires: python3-munch
+BuildRequires: python3-decorator
+BuildRequires: python3-jmespath
+BuildRequires: python3-netifaces
+BuildRequires: python3-jsonschema
+BuildRequires: python3-os-service-types
+# Test requirements
+BuildRequires: python3-deprecation
+BuildRequires: python3-iso8601 >= 0.1.11
+BuildRequires: python3-jsonpatch >= 1.6
+BuildRequires: python3-subunit
+BuildRequires: python3-oslotest
 BuildRequires: python3-stestr
+BuildRequires: python3-mock
 BuildRequires: python3-requests-mock
-BuildRequires: git
+BuildRequires: python3-testrepository
+BuildRequires: python3-testscenarios
+BuildRequires: python3-testtools
 
 Requires:      python3-openstacksdk >= 0.11.0
 Requires:      python3-openstackclient >= 3.12.0
