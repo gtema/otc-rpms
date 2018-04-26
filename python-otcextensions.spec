@@ -14,12 +14,11 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:             python-otcextensions
-Version:          0.1.0
+Version:          0.2.0
 Release:          1%{?dist}
 Summary:          OpenTelekomCloud Extensions to the OpenStack Command-line Client and the SDK
 License:          ASL 2.0
 URL:              https://github.com/OpenTelekomCloud/%{name}
-#Source0:          https://github.com/OpenTelekomCloud/% { name}/archive/% { commit}/% { name}-% { shortcommit}.tar.gz
 BuildArch:        noarch
 Source0:          https://github.com/OpenTelekomCloud/%{name}/archive/%{upstream_version}.tar.gz
 
@@ -198,6 +197,9 @@ stestr-3 --test-path ./%{modname}/tests/unit run
 %endif
 
 %changelog
+* Thu Apr 26 2018 Artem Goncharov <artem.goncharov@gmail.com> - 0.2.0-1
+- Release 0.2.0
+
 * Mon Apr 23 2018 Artem Goncharov <artem.goncharov@gmail.com> - 0.1.0-1
 - Release 0.1.0
 
